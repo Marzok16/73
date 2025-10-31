@@ -1,73 +1,68 @@
-# Welcome to your Lovable project
+# دفعة 1973 - موقع الزملاء والخريجين
 
-## Project info
+موقع ويب تذكاري لزملاء دفعة الهندسة المدنية 1973 - لحفظ الذكريات والصور وربط الزملاء.
 
-**URL**: https://lovable.dev/projects/08af45fc-ed16-4768-b3b2-765c19004761
+## المميزات
 
-## How can I edit this code?
+- 📸 عرض الصور التذكارية واللقاءات
+- 👥 قاعدة بيانات الزملاء والخريجين
+- 📚 إنشاء كتاب ذكريات PDF
+- 📱 تصميم متجاوب يعمل على جميع الأجهزة
+- 🎨 واجهة مستخدم عربية حديثة
 
-There are several ways of editing your application.
+## التقنيات المستخدمة
 
-**Use Lovable**
+- **Vite** - Build tool
+- **React** - Framework
+- **TypeScript** - Language
+- **Tailwind CSS** - Styling
+- **shadcn/ui** - UI Components
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/08af45fc-ed16-4768-b3b2-765c19004761) and start prompting.
+## التثبيت والتشغيل
 
-Changes made via Lovable will be committed automatically to this repo.
+### المتطلبات
+- Node.js (الإصدار 18 أو أحدث)
+- npm أو yarn
 
-**Use your preferred IDE**
+### خطوات التشغيل
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```bash
+# 1. تثبيت المكتبات المطلوبة
+npm install
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 2. تشغيل السيرفر للتطوير
 npm run dev
+
+# 3. بناء المشروع للإنتاج
+npm run build
+
+# 4. معاينة النسخة المبنية
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+## البنية
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+frontend/
+├── src/
+│   ├── components/      # المكونات القابلة لإعادة الاستخدام
+│   ├── pages/          # صفحات التطبيق
+│   ├── services/       # خدمات API وPDF
+│   ├── hooks/          # React Hooks مخصصة
+│   └── assets/         # الصور والملفات الثابتة
+├── public/             # الملفات العامة
+└── dist/               # الملفات المبنية (يتم إنشاؤها بعد البناء)
+```
 
-**Use GitHub Codespaces**
+## الروابط
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **المستودع**: [GitHub Repository](https://github.com/Marzok16/73)
+- **الموقع**: يتم نشره قريباً
 
-## What technologies are used for this project?
+## المساهمة
 
-This project is built with:
+نرحب بالمساهمات! يرجى فتح Issue أو Pull Request لأي تحسينات.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## الترخيص
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/08af45fc-ed16-4768-b3b2-765c19004761) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+هذا المشروع خاص لدفعة 1973 - جميع الحقوق محفوظة.
