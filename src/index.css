@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+College Memories Theme - Warm, Nostalgic, Arabic-focused
+*/
+
+@layer base {
+  :root {
+    /* Clean white background with dark green accents */
+    --background: 0 0% 100%;
+    --foreground: 150 25% 15%;
+
+    /* Cards with subtle tint */
+    --card: 0 0% 100%;
+    --card-foreground: 150 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 25% 15%;
+
+    /* Dark forest green primary color - deep and professional */
+    --primary: 150 70% 25%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Medium dark green secondary */
+    --secondary: 150 65% 30%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted green tones */
+    --muted: 150 15% 94%;
+    --muted-foreground: 150 20% 40%;
+
+    /* Light green accent */
+    --accent: 150 20% 90%;
+    --accent-foreground: 150 25% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 15% 88%;
+    --input: 150 15% 88%;
+    --ring: 150 70% 25%;
+
+    --radius: 0.75rem;
+    
+    /* Custom tokens for college memories - dark green theme */
+    --gradient-hero: linear-gradient(135deg, hsl(150 70% 25%) 0%, hsl(150 65% 30%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(150 15% 98%) 100%);
+    --shadow-warm: 0 10px 40px -10px hsl(150 70% 25% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(150 25% 15% / 0.08);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme with dark green accents */
+    --background: 150 30% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 150 25% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 150 25% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 150 65% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 60% 40%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 150 20% 20%;
+    --muted-foreground: 150 15% 65%;
+
+    --accent: 150 40% 22%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 150 20% 25%;
+    --input: 150 20% 25%;
+    --ring: 150 65% 35%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(150 65% 35%) 0%, hsl(150 60% 40%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(150 25% 12%) 0%, hsl(150 20% 10%) 100%);
+    --shadow-warm: 0 10px 40px -10px hsl(150 65% 35% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    direction: rtl;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-warm {
+    box-shadow: var(--shadow-warm);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

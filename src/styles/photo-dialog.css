@@ -1,0 +1,140 @@
+/* Enhanced Photo Dialog Styles */
+.photo-dialog-container {
+  will-change: transform;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.photo-dialog-image {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* Smooth zoom animations */
+.zoom-transition {
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.zoom-transition.dragging {
+  transition: none;
+}
+
+/* Dialog backdrop blur effect */
+.dialog-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Custom scrollbar for touch devices */
+.photo-controls::-webkit-scrollbar {
+  display: none;
+}
+
+.photo-controls {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Prevent text selection during drag */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hardware acceleration */
+.gpu-accelerated {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Smooth fade in animation */
+@keyframes fadeInPhoto {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.photo-fade-in {
+  animation: fadeInPhoto 0.3s ease-out;
+}
+
+/* Loading spinner optimization */
+.loading-spinner {
+  animation: spin 1s linear infinite;
+  will-change: transform;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Touch-friendly controls */
+@media (hover: none) and (pointer: coarse) {
+  .touch-friendly {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .photo-dialog-controls {
+    padding: 12px;
+  }
+  
+  .photo-dialog-controls button {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .zoom-transition {
+    transition: none;
+  }
+  
+  .photo-fade-in {
+    animation: none;
+  }
+  
+  .loading-spinner {
+    animation: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .photo-dialog-controls {
+    background-color: black;
+    border: 2px solid white;
+  }
+  
+  .photo-dialog-controls button {
+    border: 1px solid white;
+  }
+}
+
+/* Print styles */
+@media print {
+  .photo-dialog-controls {
+    display: none;
+  }
+}
