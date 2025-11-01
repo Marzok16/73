@@ -54,10 +54,30 @@ frontend/
 └── dist/               # الملفات المبنية (يتم إنشاؤها بعد البناء)
 ```
 
+## النشر (Deployment)
+
+### النشر على Vercel (مجاني)
+
+1. افتح https://vercel.com وسجل دخول بحساب GitHub
+2. اضغط "Add New Project"
+3. اختر المستودع `Marzok16/73`
+4. الإعدادات:
+   - **Framework Preset**: Vite
+   - **Root Directory**: `frontend`
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+5. اضغط "Deploy"
+
+بعد النشر ستحصل على رابط مثل: `https://73.vercel.app`
+
+### بدائل أخرى
+- **Netlify**: https://netlify.com (مجاني أيضاً)
+- **GitHub Pages**: يحتاج إعداد إضافي
+
 ## الروابط
 
 - **المستودع**: [GitHub Repository](https://github.com/Marzok16/73)
-- **الموقع**: يتم نشره قريباً
+- **الموقع**: يتم نشره على Vercel
 
 ## المساهمة
 
