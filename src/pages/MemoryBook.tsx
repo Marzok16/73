@@ -10,7 +10,7 @@ const MemoryBook: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [downloading, setDownloading] = useState(false);
 
-  const API_BASE = 'http://127.0.0.1:8000/api';
+  const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000/api';
 
   useEffect(() => {
     const fetchMemories = async () => {

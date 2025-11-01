@@ -60,7 +60,7 @@ const MeetingPhotos = ({ onRefresh }: MeetingPhotosProps) => {
   const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
 
   // API base and helpers
-  const API_BASE = "http://127.0.0.1:8000/api";
+  const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000/api";
   const getAuthHeaders = () => {
     const token = localStorage.getItem("admin_token");
     return token ? { Authorization: `Token ${token}` } : {};
